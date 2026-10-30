@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.test2.databinding.ItemEmployeeBinding
 import com.example.test2.entities.Employee
 import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.Locale
 
 class EmployeeAdapter(
     private var employees: List<Employee>,
@@ -13,7 +15,7 @@ class EmployeeAdapter(
     private val onItemLongClick: (Employee) -> Unit
 ) : RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder>() {
 
-    private val decimalFormat = DecimalFormat("#,### đ/giờ")
+    private val decimalFormat = DecimalFormat("#,### đ/giờ", DecimalFormatSymbols.getInstance(Locale.forLanguageTag("vi-VN")))
 
     fun updateData(newEmployees: List<Employee>) {
         employees = newEmployees

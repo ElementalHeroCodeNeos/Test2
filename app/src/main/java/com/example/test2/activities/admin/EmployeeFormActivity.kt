@@ -112,7 +112,8 @@ class EmployeeFormActivity : AppCompatActivity() {
             if (employeeId == -1L) {
                 // Thêm nhân viên
                 val existingCode = dao.getEmployeeByCode(code)
-                if (existingCode != null) {
+                val existingAccount = dao.getAccountByUsername(code)
+                if (existingCode != null || existingAccount != null) {
                     binding.edtCode.error = "Mã nhân viên đã tồn tại"
                     return@launch
                 }

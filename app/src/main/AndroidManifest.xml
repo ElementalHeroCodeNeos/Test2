@@ -32,6 +32,16 @@
             android:exported="false" />
 
         <activity
+            android:name=".activities.admin.EmployeeListActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activities.admin.EmployeeFormActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name=".activities.employee.EmployeeHomeActivity"
             android:exported="false" />
 

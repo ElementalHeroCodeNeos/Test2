@@ -22,6 +22,10 @@ class AdminActivity : AppCompatActivity() {
         val username = sessionManager.getUsername()
         binding.tvWelcome.text = "Xin chào, $username"
 
+        binding.btnManageEmployee.setOnClickListener {
+            startActivity(Intent(this, EmployeeListActivity::class.java))
+        }
+
         binding.btnLogout.setOnClickListener {
             logout()
         }
